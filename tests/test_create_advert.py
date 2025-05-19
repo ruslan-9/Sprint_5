@@ -1,11 +1,12 @@
 from selenium.webdriver.chrome.webdriver import WebDriver
 from locators.locators import CreateAdvert
 from locators.locators import AutorisationLocators
+from data import BASE_URL, PROFILE_URL, EMAIL, PASSWORD
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 def test_create_advert_unauthorized_user(driver: WebDriver):
-    driver.get("https://qa-desk.stand.praktikum-services.ru/ ")
+    driver.get(BASE_URL)
 
     driver.find_element(*CreateAdvert.NEW_ADVERT).click()
 
@@ -17,14 +18,14 @@ def test_create_advert_unauthorized_user(driver: WebDriver):
     
 
 def test_create_advert_authorized_user_success(driver: WebDriver):
-    driver.get("https://qa-desk.stand.praktikum-services.ru/ ")
+    driver.get(BASE_URL)
 
     driver.find_element(*AutorisationLocators.LOGIN_BUTTON).click()
 
     WebDriverWait(driver, 5).until(
     EC.presence_of_element_located((AutorisationLocators.EMAIL_INPUT))
-).send_keys('existing_user@test.ru')
-    driver.find_element(*AutorisationLocators.PASSWORD_INPUT).send_keys('123456')
+).send_keys(EMAIL)
+    driver.find_element(*AutorisationLocators.PASSWORD_INPUT).send_keys(PASSWORD)
     driver.find_element(*AutorisationLocators.ENTER_BUTTON).click()
 
     WebDriverWait(driver, 10).until(
@@ -48,7 +49,7 @@ def test_create_advert_authorized_user_success(driver: WebDriver):
     driver.find_element(*CreateAdvert.RABIO_BUTTON_BU).click()
     driver.find_element(*CreateAdvert.TO_PUBLISH).click()
 
-    driver.get("https://qa-desk.stand.praktikum-services.ru/profile")
+    driver.get(PROFILE_URL)
 
     WebDriverWait(driver, 5).until(
     EC.presence_of_element_located(CreateAdvert.CARD_SEARCH)

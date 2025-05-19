@@ -1,0 +1,6 @@
+BASE_URL = 'https://qa-desk.stand.praktikum-services.ru/'
+REGISTRATION_URL = 'https://qa-desk.stand.praktikum-services.ru/regiatration'
+LOGIN_URL = 'https://qa-desk.stand.praktikum-services.ru/login'
+PROFILE_URL = 'https://qa-desk.stand.praktikum-services.ru/profile'
+EMAIL = 'existing_user@test.ru'
+PASSWORD = '123456'
