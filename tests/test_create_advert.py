@@ -5,7 +5,7 @@ from data import BASE_URL, PROFILE_URL, EMAIL, PASSWORD
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-class CreateAdvert:
+class TestCreateAdvert:
     def test_create_advert_unauthorized_user(self, driver: WebDriver):
         driver.get(BASE_URL)
 
