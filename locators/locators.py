@@ -1,0 +1,40 @@
+from selenium.webdriver.common.by import By
+
+class RegistrationLocators:
+    LOGIN_BUTTON = (By.XPATH, "//button[contains(text(), 'Вход и регистрация')]")
+    REGISTER_BUTTON = (By.XPATH, "//button[contains(text(), 'Нет аккаунта')]")
+    CREATE_ACCOUNT_BUTTON = (By.XPATH, "//button[contains(text(), 'Создать аккаунт')]")
+    USER_AVATAR = (By.XPATH, "//button[@class='circleSmall']")
+    USER_NAME = (By.XPATH, "//h3[@class='profileText name']")
+    EMAIL_INPUT = (By.XPATH, "//input[@name='email']")
+    PASSWORD_INPUT = (By.XPATH, "//input[@name='password']")
+    SUBMIT_PASSWORD_INPUT = (By.XPATH, "//input[@name='submitPassword']")
+    CREATE_ACCOUNT_BUTTON = (By.XPATH, "//button[contains(text(), 'Создать аккаунт')]")
+    EMAIL_ERROR = (By.XPATH, "(//span[contains(@class, 'input_span__yWPqB')])[1]")
+    EMAIL_BORDER = (By.XPATH, "//input[@name='email']/parent::div")
+    PASSWORD_BORDER = (By.XPATH, "//input[@name='password']/parent::div")
+    SUBMIT_PASSWORD_BORDER = (By.XPATH, "//input[@name='submitPassword']/parent::div")
+
+class AutorisationLocators:
+    LOGIN_BUTTON = (By.XPATH, "//button[contains(text(), 'Вход и регистрация')]")
+    ENTER_BUTTON = (By.XPATH, "//button[contains(text(), 'Войти')]")
+    EMAIL_INPUT = (By.XPATH, "//input[@name='email']")
+    PASSWORD_INPUT = (By.XPATH, "//input[@name='password']")
+    USER_AVATAR = (By.XPATH, "//button[@class='circleSmall']")
+    USER_NAME = (By.XPATH, "//h3[@class='profileText name']")
+    LOGOUT_BUTTON = (By.XPATH, "//button[contains(text(), 'Выйти')]")
+
+class CreateAdvert:
+    NEW_ADVERT = (By.XPATH, "//button[contains(text(), 'Разместить объявление')]")
+    MODAL_WINDOW = (By.XPATH, "//form[@class='popUp_shell__LuyqR']")
+    MODAL_WINDOW_TITLE = (By.XPATH, "//h1[text()='Чтобы разместить объявление, авторизуйтесь']")
+    NAME_INPUT = (By.XPATH, "//input[@name='name']")
+    PRODUCT_DESCRIPTION = (By.XPATH, "//textarea[@name='description']")
+    PRICE_INPUT = (By.XPATH, "//input[@name='price']")
+    CATEGORY_INPUT = (By.XPATH, "//*[contains(@class,'createListing_inputRow')]//button[contains(@class, 'dropDownMenu_arrow')]")
+    TECHNOLOGY_BUTTON = (By.XPATH, "//button[span[text()='Технологии']]")
+    CITY_INPUT = (By.XPATH, "(//button[@class='dropDownMenu_arrowDown__pfGL1 dropDownMenu_noDefault__wSKsP'])[2]")
+    SPB_BUTTON = (By.XPATH, "//button[span[text()='Санкт-Петербург']]")
+    RABIO_BUTTON_BU = (By.XPATH, "//div[@class='radioUnput_inputRegular__FbVbr']")
+    TO_PUBLISH = (By.XPATH, "//button[contains(text(), 'Опубликовать')]")
+    CARD_SEARCH = (By.XPATH, "//div[@class='card' and .//h2[text()='Iphone 15']]//h2")
